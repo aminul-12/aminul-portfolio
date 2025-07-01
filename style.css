@@ -254,13 +254,19 @@ footer {
   background-color: #2c2c2c;
   border-radius: 50px;
   overflow: hidden;
-  height: 18px;
+  height: 16px;
+  position: relative;
 }
 
 .skill-progress {
+  position: absolute;
   height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
   border-radius: 50px;
-  animation: fillBar 2s ease-out;
+  animation: fillBar 2s ease-out forwards;
+  animation-fill-mode: forwards;
 }
 
 .skill-progress.htmlcss {
