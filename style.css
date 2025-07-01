@@ -531,10 +531,4 @@ footer {
     opacity: 1;
   }
 }
-.skill-progress {
-  height: 100%;
-  border-radius: 50px;
-  animation: fillBar 2s ease-out forwards;
-  opacity: 0;
-  animation-fill-mode: forwards;
-    }
+
