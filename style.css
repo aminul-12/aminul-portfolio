@@ -122,3 +122,23 @@ section {
     max-width: 200px;
   }
 }
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 22px;
+  background-color: #ffca28;
+  color: #121212;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 99;
+}
+
+#scrollTopBtn:hover {
+  background-color: #ffd860;
+}
+
