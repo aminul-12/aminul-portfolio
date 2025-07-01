@@ -1,91 +1,829 @@
-/* ✅ Hero Section Layout */
+/* ✅ STEP 1: CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+/* style.css এর শুরুতে আপডেট করুন */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #1f1f1f;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #00bcd4;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #bbb;
+}
+
+nav a {
+  color: #90caf9;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.profile-pic {
+  display: block;
+  max-width: 180px;
+  margin: 20px auto;
+  border-radius: 50%;
+  border: 4px solid #00bcd4;
+}
+
+section {
+  background-color: #1e1e1e;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #ffca28;
+  margin-bottom: 15px;
+}
+
+a {
+  color: #80cbc4;
+}
+
+a:hover {
+  color: #26c6da;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  color: #888;
+}
+#hero {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f1f5f9;
+}
+
 .hero-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  padding: 60px 40px;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
   flex-wrap: wrap;
-  background-color: #1e1e1e;
+}
+.hero-container {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.45); /* গাঢ় কালো স্তর */
+  z-index: 1;
 }
 
 .hero-text {
-  flex: 1;
-  padding-right: 20px;
-  color: #ffffff;
+  position: relative;
+  z-index: 2;
 }
-
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+.hero-text h3,
+.hero-text .typewriter-text {
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.85);
+}
 .hero-text h1 {
-  font-size: 42px;
-  font-weight: 700;
-  color: #ffca28;
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
+.hero-text h1 span {
+  color: #60a5fa;
+}
+
 .hero-text h3 {
-  font-size: 22px;
-  font-weight: 500;
-  color: #ffffff;
-  margin-top: 0;
+  font-weight: 400;
+  color: #94a3b8;
+  margin-bottom: 20px;
 }
 
 .hero-text p {
   font-size: 16px;
-  color: #dddddd;
-  margin-top: 10px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hero-buttons .btn,
+.hero-buttons .btn-outline {
+  padding: 12px 24px;
+  margin-right: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #2563eb;
+}
+
+.btn-outline {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.btn-outline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.btn-outline:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+.btn-outline:hover::before {
+  left: 0;
+}
+
+.btn-outline:hover {
+  background-color: #3b82f6;
+  color: white;
 }
 
 .hero-image {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-width: 280px;
+  padding: 20px;
+  text-align: center;
 }
 
 .hero-image img {
-  max-width: 320px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
-@media screen and (max-width: 768px) {
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 15px;
-  }
 
-  .hero-text {
-    padding: 0;
-    margin-bottom: 20px;
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
   }
 
   .hero-text h1 {
-    font-size: 30px;
-  }
-
-  .hero-text h3 {
-    font-size: 18px;
+    font-size: 28px;
   }
 
   .hero-image img {
-    max-width: 240px;
+    max-width: 200px;
   }
-    }
-/* ✅ Typing Text Styling */
-.typewriter-text {
-  font-size: 22px;
-  font-weight: 500;
-  color: #ffca28;
-  min-height: 26px;
-  letter-spacing: 0.6px;
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #ffca28;
-  animation: blinkCursor 0.8s infinite;
+}
+@media (max-width: 768px) {
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+#skills {
+  background-color: #1e1e1e;
+  padding: 50px 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@keyframes blinkCursor {
-  0% { border-right-color: #ffca28; }
-  50% { border-right-color: transparent; }
-  100% { border-right-color: #ffca28; }
+.skills-container h2 {
+  color: #ffca28;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill p {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #f1f5f9;
+}
+
+.skill-bar {
+  background-color: #2c2c2c;
+  border-radius: 50px;
+  overflow: hidden;
+  height: 16px;
+  position: relative;
+}
+
+.skill-progress {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  border-radius: 50px;
+  animation: fillBar 2s ease-out forwards;
+  animation-fill-mode: forwards;
+}
+
+.skill-progress.htmlcss {
+  width: 90%;
+  background: linear-gradient(to right, #60a5fa, #3b82f6);
+}
+
+.skill-progress.js {
+  width: 75%;
+  background: linear-gradient(to right, #facc15, #f59e0b);
+}
+
+.skill-progress.python {
+  width: 80%;
+  background: linear-gradient(to right, #22d3ee, #06b6d4);
+}
+
+.skill-progress.cprog {
+  width: 85%;
+  background: linear-gradient(to right, #38bdf8, #0ea5e9);
+}
+
+.skill-progress.compiler {
+  width: 70%;
+  background: linear-gradient(to right, #c084fc, #9333ea);
+}
+
+@keyframes fillBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: inherit;
+  }
+}
+.wave-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  background: transparent;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.wave-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.wave-button:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+.wave-button .wave {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  z-index: -1;
+  transition: left 0.4s ease-in-out;
+}
+
+.wave-button:hover .wave {
+  left: 0;
+  }
+#skills {
+  background-color: #1e1e1e;
+  padding: 50px 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInSkills 1.2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInSkills {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skills-container h2 {
+  color: #ffca28;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skill {
+  margin-bottom: 25px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+.skill:nth-child(2) { animation-delay: 0.2s; }
+.skill:nth-child(3) { animation-delay: 0.4s; }
+.skill:nth-child(4) { animation-delay: 0.6s; }
+.skill:nth-child(5) { animation-delay: 0.8s; }
+.skill:nth-child(6) { animation-delay: 1.0s; }
+.skill:nth-child(7) { animation-delay: 1.2s; }
+.skill:nth-child(8) { animation-delay: 1.8s; } /* C++ */
+.skill:nth-child(9) { animation-delay: 2.0s; } /* Full-stack */
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.skill p {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #f1f5f9;
+}
+
+
+
+.skill-progress.htmlcss {
+  width: 90%;
+  background: linear-gradient(to right, #60a5fa, #3b82f6);
+}
+
+.skill-progress.js {
+  width: 75%;
+  background: linear-gradient(to right, #facc15, #f59e0b);
+}
+
+.skill-progress.python {
+  width: 80%;
+  background: linear-gradient(to right, #22d3ee, #06b6d4);
+}
+
+.skill-progress.cprog {
+  width: 85%;
+  background: linear-gradient(to right, #38bdf8, #0ea5e9);
+}
+
+.skill-progress.compiler {
+  width: 70%;
+  background: linear-gradient(to right, #c084fc, #9333ea);
+}
+
+.skill-progress.ml {
+  width: 65%;
+  background: linear-gradient(to right, #34d399, #10b981);
+}
+
+@keyframes fillBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: inherit;
+  }
+}
+#skills {
+  background-color: #1e1e1e;
+  padding: 50px 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInSkills 1.2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+.skill-progress.cpp {
+  width: 85%;
+  background: linear-gradient(to right, #ef4444, #f87171); /* reddish tone */
+}
+
+.skill-progress.fullstack {
+  width: 75%;
+  background: linear-gradient(to right, #14b8a6, #0d9488); /* teal tone */
+.skill-progress {
+  height: 100%;
+  border-radius: 50px;
+  opacity: 0;
+  animation: fillBar 2s ease-out forwards;
+  animation-fill-mode: forwards;
+}
+
+/* Individual Skills with animation delay */
+.skill-progress.htmlcss {
+  width: 90%;
+  background: linear-gradient(to right, #60a5fa, #3b82f6);
+  animation-delay: 0.2s;
+}
+.skill-progress.js {
+  width: 75%;
+  background: linear-gradient(to right, #facc15, #f59e0b);
+  animation-delay: 0.4s;
+}
+.skill-progress.python {
+  width: 80%;
+  background: linear-gradient(to right, #22d3ee, #06b6d4);
+  animation-delay: 0.6s;
+}
+.skill-progress.cprog {
+  width: 85%;
+  background: linear-gradient(to right, #38bdf8, #0ea5e9);
+  animation-delay: 0.8s;
+}
+.skill-progress.compiler {
+  width: 70%;
+  background: linear-gradient(to right, #c084fc, #9333ea);
+  animation-delay: 1s;
+}
+.skill-progress.ml {
+  width: 65%;
+  background: linear-gradient(to right, #34d399, #10b981);
+  animation-delay: 1.2s;
+}
+.skill-progress.cpp {
+  width: 85%;
+  background: linear-gradient(to right, #ef4444, #f87171);
+  animation-delay: 1.4s;
+}
+.skill-progress.fullstack {
+  width: 75%;
+  background: linear-gradient(to right, #14b8a6, #0d9488);
+  animation-delay: 1.6s;
+}
+
+
+/* 🟡 Skills Section Container */
+#skills {
+  background-color: #1e1e1e;
+  padding: 50px 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInSkills 1.2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* 🔸 Section Heading */
+.skills-container h2 {
+  color: #ffca28;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* 🔹 Individual Skill Block */
+.skill {
+  margin-bottom: 25px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+.skill:nth-child(2) { animation-delay: 0.2s; }
+.skill:nth-child(3) { animation-delay: 0.4s; }
+.skill:nth-child(4) { animation-delay: 0.6s; }
+.skill:nth-child(5) { animation-delay: 0.8s; }
+.skill:nth-child(6) { animation-delay: 1.0s; }
+.skill:nth-child(7) { animation-delay: 1.2s; }
+.skill:nth-child(8) { animation-delay: 1.4s; } /* C++ */
+.skill:nth-child(9) { animation-delay: 1.6s; } /* Full-stack */
+
+.skill p {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #f1f5f9;
+}
+
+/* 🔘 Skill Bar Container */
+.skill-bar {
+  background-color: #2c2c2c;
+  border-radius: 50px;
+  overflow: hidden;
+  height: 18px;
+  position: relative;
+}
+
+/* 🔵 Animated Progress Bar */
+.skill-progress {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  border-radius: 50px;
+  animation: fillBar 2s ease-out forwards;
+  animation-fill-mode: forwards;
+}
+
+/* 🎯 Skill-Specific Styles (with animation delays) */
+.skill-progress.htmlcss {
+  width: 90%;
+  background: linear-gradient(to right, #60a5fa, #3b82f6);
+  animation-delay: 0.2s;
+}
+
+.skill-progress.js {
+  width: 75%;
+  background: linear-gradient(to right, #facc15, #f59e0b);
+  animation-delay: 0.4s;
+}
+
+.skill-progress.python {
+  width: 80%;
+  background: linear-gradient(to right, #22d3ee, #06b6d4);
+  animation-delay: 0.6s;
+}
+
+.skill-progress.cprog {
+  width: 85%;
+  background: linear-gradient(to right, #38bdf8, #0ea5e9);
+  animation-delay: 0.8s;
+}
+
+.skill-progress.compiler {
+  width: 70%;
+  background: linear-gradient(to right, #c084fc, #9333ea);
+  animation-delay: 1.0s;
+}
+
+.skill-progress.ml {
+  width: 65%;
+  background: linear-gradient(to right, #34d399, #10b981);
+  animation-delay: 1.2s;
+}
+
+.skill-progress.cpp {
+  width: 85%;
+  background: linear-gradient(to right, #ef4444, #f87171);
+  animation-delay: 1.4s;
+}
+
+.skill-progress.fullstack {
+  width: 75%;
+  background: linear-gradient(to right, #14b8a6, #0d9488);
+  animation-delay: 1.6s;
+}
+
+/* 📽️ Animation Keyframes */
+@keyframes fadeInSkills {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fillBar {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: inherit;
+    opacity: 1;
+  }
+}
+#projects {
+  padding: 60px 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 60px auto;
+}
+
+#projects h2 {
+  color: #ffca28;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #2a2a2a;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.project-card h3 {
+  color: #60a5fa;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.project-links .btn,
+.project-links .btn-outline {
+  padding: 10px 18px;
+  font-size: 14px;
+}
+#contact {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffca28;
+}
+
+#contact p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+/* 🔄 Mobile Screen Layout Fix */
+@media screen and (max-width: 768px) {
+  .hero-container,
+  .skills-container,
+  .projects-container,
+  #project-highlight,
+  #research,
+  #cv,
+  #contact {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.typewriter-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffca28;
+  min-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.8s infinite;
+  color: #ffca28;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+#contact h2,
+#contact p,
+#contact a {
+  color: #ffffff; /* সাদা রঙে পরিষ্কার লেখা */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* ব্যাকগ্রাউন্ডে glow */
+}
+  /* অন্যান্য CSS স্টাইল এখানে শেষ হলো */
+
+/* ✅ Mobile Layout Fix for Contact Section */
+@media screen and (max-width: 768px) {
+  #contact {
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.5);
+border-radius: 10px;
+  }
+}
+/* ✅ STEP 3: Typing Text & Cursor Styling */
+.typewriter-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffca28;
+  min-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.8s infinite;
+  color: #ffca28;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
