@@ -1,3 +1,14 @@
+/* ✅ STEP 1: CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
 /* style.css এর শুরুতে আপডেট করুন */
 * {
   margin: 0;
@@ -14,10 +25,10 @@
 }
 
 body {
-  background-color: #121212;
-  color: #e0e0e0;
-  line-height: 1.6;
-  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
 }
 
 header {
