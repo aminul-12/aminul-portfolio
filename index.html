@@ -5,171 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aminul Islam | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- index.html এর <head> এর মধ্যে বসান -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- 🌙 Dark Mode Toggle -->
   <div class="dark-toggle">
-  <label>
-    <input type="checkbox" id="darkToggle" />
-    🌙 Dark Mode
-  </label>
+    <label>
+      <input type="checkbox" id="darkToggle" />
+      🌙 Dark Mode
+    </label>
   </div>
-  <section id="hero">
-  <div class="hero-container">
+
+  <!-- ✅ Hero Section -->
+  <section class="hero-container" id="home">
     <div class="hero-text">
       <h1>Hello, I'm <span>Aminul Islam</span></h1>
       <h3><span class="typewriter-text"></span></h3>
       <p>Building knowledge, creativity & digital identity — one line of code at a time.</p>
+
       <div class="hero-buttons">
         <a href="aminul-cv.pdf" class="cv-btn" download>
-  <img src="dog-icon.png" alt="Dog Icon" />
-  Download CV
+          <img src="dog-icon.png" alt="Dog Icon" />
+          Download CV
         </a>
         <a href="#projects" class="btn">🚀 View Projects</a>
-        <a href="aminul-cv.pdf" class="wave-button" download target="_blank">
-  <img src="dog-icon.png" alt="Dog Icon">
-  Download CV
-  <span class="wave"></span>
-</a>
       </div>
     </div>
+
     <div class="hero-image">
-      <img src="profile-pic-1.png" alt="Aminul Islam">
+      <img src="profile-pic-1.png" alt="Aminul Islam" />
     </div>
-  </div>
   </section>
 
+  <!-- ✅ About Section -->
   <section id="about">
-    <img src="profile-pic-1.png" alt="Aminul Islam" class="profile-pic" />
-    <p>Hello! I’m Aminul Islam, a final year CSE student passionate about Artificial Intelligence and Machine Learning. I aim to pursue a Master's degree abroad with a focus on AI/ML and build innovative projects that solve real-world problems.</p>
+    <h2>About Me</h2>
+    <p>Hello! I’m Aminul Islam, a final year CSE student passionate about Artificial Intelligence and Machine Learning. I build clean code and impactful ideas.</p>
   </section>
-<section id="skills">
-  <div class="skills-container">
-    <h2>My Skills</h2>
+
+  <!-- ✅ Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
 
     <div class="skill">
       <p>HTML & CSS</p>
       <div class="skill-bar">
-        <div class="skill-progress htmlcss"></div>
+        <div class="skill-progress" data-percent="90%"></div>
       </div>
     </div>
 
     <div class="skill">
       <p>JavaScript</p>
       <div class="skill-bar">
-        <div class="skill-progress js"></div>
+        <div class="skill-progress" data-percent="85%"></div>
       </div>
     </div>
 
     <div class="skill">
       <p>Python</p>
       <div class="skill-bar">
-        <div class="skill-progress python"></div>
+        <div class="skill-progress" data-percent="80%"></div>
       </div>
     </div>
 
     <div class="skill">
-      <p>C Programming</p>
+      <p>C++</p>
       <div class="skill-bar">
-        <div class="skill-progress cprog"></div>
+        <div class="skill-progress" data-percent="75%"></div>
       </div>
-    </div>
-
-    <div class="skill">
-      <p>Compiler Design</p>
-      <div class="skill-bar">
-        <div class="skill-progress compiler"></div>
-      </div>
-    </div>
-
-<div class="skill">
-  <p>Machine Learning</p>
-  <div class="skill-bar">
-    <div class="skill-progress ml"></div>
-  </div>
-</div>
-
-<div class="skill">
-  <p>C++</p>
-  <div class="skill-bar">
-    <div class="skill-progress cpp"></div>
-  </div>
-</div>
-
-<div class="skill">
-  <p>Full-Stack Web Development</p>
-  <div class="skill-bar">
-    <div class="skill-progress fullstack"></div>
-  </div>
-</div>
-
-  </div>
-</section>
- <section id="projects">
-  <h2>My Projects</h2>
-
-  <div class="projects-container">
-
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>A responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
-      <div class="project-links">
-        <a href="https://github.com/aminul-12/aminul-portfolio" target="_blank" class="btn">GitHub</a>
-        <a href="https://aminul-12.github.io/aminul-portfolio" target="_blank" class="btn-outline">Live Demo</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <h3>Compiler Visualizer</h3>
-      <p>Visualizes First & Follow sets, Three Address Code — built using JS & algorithms.</p>
-      <div class="project-links">
-        <a href="#" class="btn">GitHub</a>
-        <a href="#" class="btn-outline">Live Demo</a>
-      </div>
-    </div>
-
-  </div>
- </section> 
-
-  <section id="project-highlight">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Chemical Adventure</h3>
-      <p>A React-based educational game teaching the periodic table through interactive elements.</p>
-      <a href="https://share.google/UNAlKYWZeRDsWTr3h" target="_blank">View on GitHub</a>
     </div>
   </section>
 
-  <section id="research">
-    <h2>Research</h2>
-    <ul>
-      <li><a href="https://www.facebook.com/reel/1130043742505984/?mibextid=6AJuK9" target="_blank">AI-driven Crop Yield Prediction in Bangladesh (PDF)</a></li>
-      <li><a href="#">Machine Learning Based Personality Detection</a></li>
-    </ul>
-  </section>
-
-  <section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <a href="https://www.facebook.com/share/r/1Cf3QCJcmC/" target="_blank">Download CV (PDF)</a>
-  </section>
-
+  <!-- ✅ Contact Section -->
   <section id="contact">
-  <h2>📬 Contact</h2>
-  
-  <p>📧 Email: <strong><a href="mailto:aminul@example.com">aminul@example.com</a></strong></p>
-  
-  <p>📞 Phone: <strong><a href="tel:+8801306466265">+8801306466265</a></strong></p>
-  
-  <p>🐙 GitHub: <strong>
-    <a href="https://share.google/UNAlKYWZeRDsWTr3h" target="_blank">github.com/aminul</a>
-  </strong></p>
-</section>
+    <h2>📬 Contact</h2>
+    <p>📧 Email: <a href="mailto:aminul@example.com">aminul@example.com</a></p>
+    <p>📞 Phone: <a href="tel:+8801306466265">+8801306466265</a></p>
+    <p>🐙 GitHub: <a href="https://github.com/aminul-12" target="_blank">github.com/aminul-12</a></p>
+  </section>
 
+  <!-- ✅ Footer -->
   <footer>
     <p>&copy; 2025 Aminul Islam</p>
   </footer>
+
+  <!-- 🔝 Scroll-to-top Button -->
   <button id="scrollTopBtn" title="Go to top">⬆️</button>
+
   <script src="script.js"></script>
 </body>
 </html>
