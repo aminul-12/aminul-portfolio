@@ -62,3 +62,12 @@ const toggle = document.getElementById("darkToggle");
 toggle.addEventListener("change", () => {
   document.body.classList.toggle("dark-mode");
 });
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.onscroll = function() {
+  scrollBtn.style.display = (document.documentElement.scrollTop > 300) ? "block" : "none";
+};
+
+scrollBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
