@@ -1,21 +1,19 @@
 // 🟦 Skills Section Scroll Animation
-const skillElements = document.querySelectorAll(".skill-per");
+document.querySelectorAll(".skill-per").forEach(skill => {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        skill.style.width = getComputedStyle(skill).getPropertyValue("--percent");
+        skill.style.opacity = 1;
+        obs.unobserve(skill);
+      }
+    });
+  }, { threshold: 0.5 });
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      el.style.width = getComputedStyle(el).getPropertyValue("--percent");
-      el.style.opacity = 1;
-      observer.unobserve(el);
-    }
-  });
-}, { threshold: 0.5 });
-
-skillElements.forEach(skill => {
   observer.observe(skill);
 });
-// ✅ Typing Effect
+
+// ✅ Typing Effect (Looped TypeWriter)
 const phrases = [
   "Final Year CSE Student",
   "AI/ML Researcher",
@@ -24,31 +22,27 @@ const phrases = [
   "Future Innovator 🚀"
 ];
 
-let i = 0;
-let j = 0;
-let isDeleting = false;
-const speed = 100;
-const delay = 1500;
-const target = document.querySelector(".typewriter-text");
+const typewriter = document.querySelector(".typewriter-text");
+let phraseIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
-function type() {
-  if (!target) return;
+function typeLoop() {
+  const currentPhrase = phrases[phraseIndex];
+  const displayText = currentPhrase.slice(0, charIndex);
+  typewriter.innerHTML = displayText + "<span class='cursor'>|</span>";
 
-  const current = phrases[i];
-  const visible = current.slice(0, j);
-
-  target.innerHTML = visible + "<span class='cursor'>|</span>";
-
-  if (!isDeleting && j < current.length) {
-    j++;
-    setTimeout(type, speed);
-  } else if (isDeleting && j > 0) {
-    j--;
-    setTimeout(type, speed / 2);
+  if (!deleting && charIndex < currentPhrase.length) {
+    charIndex++;
+    setTimeout(typeLoop, 100);
+  } else if (deleting && charIndex > 0) {
+    charIndex--;
+    setTimeout(typeLoop, 60);
   } else {
-    isDeleting = !isDeleting;
-    if (!isDeleting) i = (i + 1) % phrases.length;
-    setTimeout(type, delay);
+    deleting = !deleting;
+    if (!deleting) phraseIndex = (phraseIndex + 1) % phrases.length;
+    setTimeout(typeLoop, 1500);
   }
 }
-document.addEventListener("DOMContentLoaded", type);
+
+document.addEventListener("DOMContentLoaded", typeLoop);
