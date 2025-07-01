@@ -45,9 +45,9 @@ function typeLoop() {
     setTimeout(typeLoop, 1500);
   }
 }
-
 document.addEventListener("DOMContentLoaded", typeLoop);
 
+// ✅ Scroll-to-top Button Logic
 const scrollBtn = document.getElementById("scrollTopBtn");
 
 window.onscroll = function() {
@@ -57,17 +57,9 @@ window.onscroll = function() {
 scrollBtn.onclick = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
 // ✅ Dark Mode Toggle
 const toggle = document.getElementById("darkToggle");
 toggle.addEventListener("change", () => {
   document.body.classList.toggle("dark-mode");
 });
-const scrollBtn = document.getElementById("scrollTopBtn");
-
-window.onscroll = function() {
-  scrollBtn.style.display = (document.documentElement.scrollTop > 300) ? "block" : "none";
-};
-
-scrollBtn.onclick = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
