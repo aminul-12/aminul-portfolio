@@ -1,9 +1,10 @@
 // 🟦 Skills Section Scroll Animation
-document.querySelectorAll(".skill-per").forEach(skill => {
+document.querySelectorAll(".skill-progress").forEach(skill => {
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        skill.style.width = getComputedStyle(skill).getPropertyValue("--percent");
+        const percent = skill.dataset.percent || "0%";
+        skill.style.width = percent;
         skill.style.opacity = 1;
         obs.unobserve(skill);
       }
