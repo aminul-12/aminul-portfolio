@@ -122,3 +122,27 @@ body {
 .cursor {
   color: #ffca28;
 }
+section {
+  padding: 40px 20px;
+}
+a {
+  color: #ffca28;
+  text-decoration: none;
+  margin: 6px 0;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+#contact {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px 20px;
+  border-radius: 12px;
+  color: #ffffff;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffca28;
+}
