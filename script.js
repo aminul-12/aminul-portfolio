@@ -57,3 +57,8 @@ window.onscroll = function() {
 scrollBtn.onclick = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+// ✅ Dark Mode Toggle
+const toggle = document.getElementById("darkToggle");
+toggle.addEventListener("change", () => {
+  document.body.classList.toggle("dark-mode");
+});
