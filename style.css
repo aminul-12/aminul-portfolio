@@ -455,3 +455,12 @@ footer {
   animation: fadeInSkills 1.2s ease-out forwards;
   animation-delay: 0.5s;
 }
+.skill-progress.cpp {
+  width: 85%;
+  background: linear-gradient(to right, #ef4444, #f87171); /* reddish tone */
+}
+
+.skill-progress.fullstack {
+  width: 75%;
+  background: linear-gradient(to right, #14b8a6, #0d9488); /* teal tone */
+}
