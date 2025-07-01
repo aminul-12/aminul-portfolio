@@ -104,3 +104,21 @@ body {
   .typewriter-text { font-size: 18px; }
   .hero-image img { max-width: 240px; }
 }
+.typewriter-text {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffca28;
+  border-right: 2px solid #ffca28;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: blinkCursor 0.8s infinite;
+}
+@keyframes blinkCursor {
+  0% { border-right-color: #ffca28; }
+  50% { border-right-color: transparent; }
+  100% { border-right-color: #ffca28; }
+}
+.cursor {
+  color: #ffca28;
+}
