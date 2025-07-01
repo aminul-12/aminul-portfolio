@@ -719,3 +719,21 @@ footer {
   font-size: 16px;
   margin: 10px 0;
 }
+/* 🔄 Mobile Screen Layout Fix */
+@media screen and (max-width: 768px) {
+  .hero-container,
+  .skills-container,
+  .projects-container,
+  #project-highlight,
+  #research,
+  #cv,
+  #contact {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
