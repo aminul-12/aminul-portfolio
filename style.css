@@ -767,3 +767,21 @@ footer {
   50% { opacity: 0; }
   100% { opacity: 1; }
 }
+#contact h2,
+#contact p,
+#contact a {
+  color: #ffffff; /* সাদা রঙে পরিষ্কার লেখা */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* ব্যাকগ্রাউন্ডে glow */
+}
+  /* অন্যান্য CSS স্টাইল এখানে শেষ হলো */
+
+/* ✅ Mobile Layout Fix for Contact Section */
+@media screen and (max-width: 768px) {
+  #contact {
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.5);
+border-radius: 10px;
+  }
+}
