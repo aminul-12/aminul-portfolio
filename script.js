@@ -47,3 +47,13 @@ function typeLoop() {
 }
 
 document.addEventListener("DOMContentLoaded", typeLoop);
+
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.onscroll = function() {
+  scrollBtn.style.display = (document.documentElement.scrollTop > 300) ? "block" : "none";
+};
+
+scrollBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
