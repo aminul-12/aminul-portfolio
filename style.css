@@ -466,3 +466,68 @@ footer {
   width: 75%;
   background: linear-gradient(to right, #14b8a6, #0d9488); /* teal tone */
 }
+.skill-progress {
+  height: 100%;
+  border-radius: 50px;
+  animation: fillBar 2s ease-out forwards;
+  opacity: 0;
+}
+
+.skill-progress.htmlcss {
+  width: 90%;
+  background: linear-gradient(to right, #60a5fa, #3b82f6);
+  animation-delay: 0.4s;
+}
+
+.skill-progress.js {
+  width: 75%;
+  background: linear-gradient(to right, #facc15, #f59e0b);
+  animation-delay: 0.6s;
+}
+
+.skill-progress.python {
+  width: 80%;
+  background: linear-gradient(to right, #22d3ee, #06b6d4);
+  animation-delay: 0.8s;
+}
+
+.skill-progress.cprog {
+  width: 85%;
+  background: linear-gradient(to right, #38bdf8, #0ea5e9);
+  animation-delay: 1s;
+}
+
+.skill-progress.compiler {
+  width: 70%;
+  background: linear-gradient(to right, #c084fc, #9333ea);
+  animation-delay: 1.2s;
+}
+
+.skill-progress.ml {
+  width: 65%;
+  background: linear-gradient(to right, #34d399, #10b981);
+  animation-delay: 1.4s;
+}
+
+.skill-progress.cpp {
+  width: 85%;
+  background: linear-gradient(to right, #ef4444, #f87171);
+  animation-delay: 1.6s;
+}
+
+.skill-progress.fullstack {
+  width: 75%;
+  background: linear-gradient(to right, #14b8a6, #0d9488);
+  animation-delay: 1.8s;
+}
+
+@keyframes fillBar {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: inherit;
+    opacity: 1;
+  }
+}
