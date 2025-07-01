@@ -704,3 +704,18 @@ footer {
   padding: 10px 18px;
   font-size: 14px;
 }
+#contact {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffca28;
+}
+
+#contact p {
+  font-size: 16px;
+  margin: 10px 0;
+}
