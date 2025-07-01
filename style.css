@@ -464,3 +464,5 @@ footer {
   width: 75%;
   background: linear-gradient(to right, #14b8a6, #0d9488); /* teal tone */
 }
+.skill:nth-child(10) { animation-delay: 1.8s; } /* C++ */
+.skill:nth-child(11) { animation-delay: 2.0s; } /* Full-stack */
