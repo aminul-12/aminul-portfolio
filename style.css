@@ -442,3 +442,16 @@ footer {
     width: inherit;
   }
 }
+#skills {
+  background-color: #1e1e1e;
+  padding: 50px 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInSkills 1.2s ease-out forwards;
+  animation-delay: 0.5s;
+}
