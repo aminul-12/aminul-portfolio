@@ -521,6 +521,15 @@ footer {
   animation-delay: 1.8s;
 }
 
+/* এই অংশ নিচে যোগ করুন */
+.skill-progress {
+  height: 100%;
+  border-radius: 50px;
+  opacity: 0;
+  animation: fillBar 2s ease-out forwards;
+  animation-fill-mode: forwards;
+}
+
 @keyframes fillBar {
   0% {
     width: 0%;
@@ -531,4 +540,3 @@ footer {
     opacity: 1;
   }
 }
-
