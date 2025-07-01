@@ -1,14 +1,13 @@
-/* ✅ CSS RESET */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;
+body {
   font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
 }
 
 /* ✅ Hero Section Layout */
@@ -23,69 +22,57 @@ html, body {
   z-index: 0;
   overflow: hidden;
 }
-
 .hero-container::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.45);
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.45);
   z-index: 1;
 }
-
 .hero-text {
   flex: 1;
   padding-right: 20px;
   position: relative;
   z-index: 2;
 }
-
 .hero-text h1 {
   font-size: 42px;
   font-weight: 700;
   color: #ffca28;
-  margin-bottom: 10px;
 }
-
 .hero-text h3 {
   font-size: 22px;
   font-weight: 500;
-  color: #ffffff;
-  margin-top: 0;
-}
-
-.hero-text p {
-  font-size: 16px;
-  color: #dddddd;
   margin-top: 10px;
 }
+.hero-text p {
+  font-size: 16px;
+  margin-top: 15px;
+  color: #dddddd;
+}
 
-/* ✅ Typing Animation Styling */
+/* ✅ Typing Text Styling */
 .typewriter-text {
   font-size: 22px;
   font-weight: 500;
   color: #ffca28;
-  min-height: 26px;
-  letter-spacing: 0.6px;
-  display: inline-block;
+  border-right: 2px solid #ffca28;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid #ffca28;
+  display: inline-block;
   animation: blinkCursor 0.8s infinite;
 }
-
 @keyframes blinkCursor {
   0% { border-right-color: #ffca28; }
   50% { border-right-color: transparent; }
   100% { border-right-color: #ffca28; }
 }
-
 .cursor {
   color: #ffca28;
 }
 
-/* ✅ Hero Image Styling */
+/* ✅ Hero Image */
 .hero-image {
   flex: 1;
   display: flex;
@@ -94,14 +81,13 @@ html, body {
   position: relative;
   z-index: 2;
 }
-
 .hero-image img {
   max-width: 320px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* ✅ Responsive Design (Mobile Fix) */
+/* ✅ Responsive Hero Section */
 @media screen and (max-width: 768px) {
   .hero-container {
     flex-direction: column;
@@ -109,25 +95,12 @@ html, body {
     padding: 30px 15px;
     gap: 24px;
   }
-
   .hero-text {
     padding: 0;
     margin-bottom: 20px;
   }
-
-  .hero-text h1 {
-    font-size: 30px;
-  }
-
-  .hero-text h3 {
-    font-size: 18px;
-  }
-
-  .typewriter-text {
-    font-size: 18px;
-  }
-
-  .hero-image img {
-    max-width: 240px;
-  }
+  .hero-text h1 { font-size: 30px; }
+  .hero-text h3 { font-size: 18px; }
+  .typewriter-text { font-size: 18px; }
+  .hero-image img { max-width: 240px; }
 }
