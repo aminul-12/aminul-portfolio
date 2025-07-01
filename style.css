@@ -296,3 +296,44 @@ footer {
     width: inherit;
   }
 }
+.wave-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  background: transparent;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.wave-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.wave-button:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+.wave-button .wave {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  z-index: -1;
+  transition: left 0.4s ease-in-out;
+}
+
+.wave-button:hover .wave {
+  left: 0;
+  }
