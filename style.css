@@ -191,3 +191,25 @@ section {
 #scrollTopBtn:hover {
   background-color: #ffd860;
 }
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffca28;
+  color: #121212;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  margin-top: 12px;
+}
+.cv-btn:hover {
+  background-color: #ffd860;
+}
+.cv-btn img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+}
