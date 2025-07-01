@@ -748,3 +748,22 @@ footer {
     gap: 30px;
   }
 }
+.typewriter-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffca28;
+  min-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.8s infinite;
+  color: #ffca28;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
