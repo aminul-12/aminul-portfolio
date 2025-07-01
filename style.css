@@ -1,58 +1,63 @@
-/* Base Reset */
+/* ✅ Base Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #121212;
   color: #ffffff;
+  line-height: 1.6;
 }
 
-/* ✅ Hero Section Layout */
+a {
+  color: #ffca28;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Container Padding */
+section {
+  padding: 60px 30px;
+}
+
+/* ✅ Hero Section */
 .hero-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 40px;
   flex-wrap: wrap;
+  padding: 60px 30px;
   background-color: #1e1e1e;
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
 }
-.hero-container::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.45);
-  z-index: 1;
-}
+
 .hero-text {
   flex: 1;
-  padding-right: 20px;
-  position: relative;
-  z-index: 2;
 }
+
 .hero-text h1 {
   font-size: 42px;
   font-weight: 700;
   color: #ffca28;
 }
+
 .hero-text h3 {
   font-size: 22px;
-  font-weight: 500;
-  margin-top: 10px;
+  margin: 10px 0;
+  color: #ffffff;
 }
+
 .hero-text p {
   font-size: 16px;
-  margin-top: 15px;
   color: #dddddd;
 }
 
-/* ✅ Typing Text Styling */
+/* ✅ Typing Effect Styling */
 .typewriter-text {
   font-size: 22px;
   font-weight: 500;
@@ -63,13 +68,11 @@ body {
   display: inline-block;
   animation: blinkCursor 0.8s infinite;
 }
+
 @keyframes blinkCursor {
   0% { border-right-color: #ffca28; }
   50% { border-right-color: transparent; }
   100% { border-right-color: #ffca28; }
-}
-.cursor {
-  color: #ffca28;
 }
 
 /* ✅ Hero Image */
@@ -77,72 +80,45 @@ body {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 2;
 }
+
 .hero-image img {
-  max-width: 320px;
+  max-width: 280px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* ✅ Responsive Hero Section */
+/* ✅ Button Styling */
+.btn {
+  display: inline-block;
+  background-color: #ffca28;
+  color: #121212;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffd860;
+}
+
+/* ✅ Responsive */
 @media screen and (max-width: 768px) {
   .hero-container {
     flex-direction: column;
     text-align: center;
-    padding: 30px 15px;
-    gap: 24px;
   }
-  .hero-text {
-    padding: 0;
-    margin-bottom: 20px;
-  }
-  .hero-text h1 { font-size: 30px; }
-  .hero-text h3 { font-size: 18px; }
-  .typewriter-text { font-size: 18px; }
-  .hero-image img { max-width: 240px; }
-}
-.typewriter-text {
-  font-size: 22px;
-  font-weight: 500;
-  color: #ffca28;
-  border-right: 2px solid #ffca28;
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  animation: blinkCursor 0.8s infinite;
-}
-@keyframes blinkCursor {
-  0% { border-right-color: #ffca28; }
-  50% { border-right-color: transparent; }
-  100% { border-right-color: #ffca28; }
-}
-.cursor {
-  color: #ffca28;
-}
-section {
-  padding: 40px 20px;
-}
-a {
-  color: #ffca28;
-  text-decoration: none;
-  margin: 6px 0;
-  display: inline-block;
-}
 
-a:hover {
-  text-decoration: underline;
-}
-#contact {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 30px 20px;
-  border-radius: 12px;
-  color: #ffffff;
-}
-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #ffca28;
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text h3 {
+    font-size: 18px;
+  }
+
+  .hero-image img {
+    max-width: 200px;
+  }
 }
